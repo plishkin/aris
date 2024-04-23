@@ -1,0 +1,12 @@
+{
+  "name": "bb/bb-typography",
+  "description": "B2B typography Print Estimator silverstripe module",
+  "type": "silverstripe-module",
+  "require": {
+    "php": ">=5.3.3"
+  },
+  "config": {
+    "process-timeout": 600
+  },
+  "minimum-stability": "dev"
+}

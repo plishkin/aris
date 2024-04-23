@@ -1,0 +1,9 @@
+---
+Name: bbTypographConfig
+After:
+  - 'framework/*'
+  - 'cms/*'
+---
+#EcommerceAdmin:
+#  extensions:
+#    - SubsiteMenuExtension

@@ -1,0 +1,15 @@
+---
+Name: pc-ecommerce-extensions
+After:
+  - 'framework/*'
+  - 'cms/*'
+---
+PC\OrderStatus:
+  extensions:
+    ['TranslatableDataObject']
+PC\BookFormat:
+  extensions:
+    ['TranslatableDataObject']
+PC\Product:
+  extensions:
+    ['TranslatableDataObject']

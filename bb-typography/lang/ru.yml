@@ -1,0 +1,19 @@
+ru:
+  BB\Circulation:
+    SINGULARNAME: 'Тираж'
+    PLURALNAME: 'Тиражи'
+  BB\Chromaticity:
+    SINGULARNAME: 'Цветность'
+    PLURALNAME: 'Цветности'
+  BB\PaperDensity:
+    SINGULARNAME: 'Плотность бумаги'
+    PLURALNAME: 'Плотности бумаги'
+  BB\Finishing:
+    SINGULARNAME: 'Отделка'
+    PLURALNAME: 'Отделки'
+  BB\PaperFormat:
+    SINGULARNAME: 'Формат бумаги'
+    PLURALNAME: 'Форматы бумаги'
+  BB\PaperType:
+    SINGULARNAME: 'Тип бумаги'
+    PLURALNAME: 'Типы бумаги'

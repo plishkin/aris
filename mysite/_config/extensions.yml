@@ -1,0 +1,19 @@
+---
+Name: myextensions
+After:
+  - 'framework/*'
+  - 'cms/*'
+---
+SiteConfig:
+  extensions:
+    - MySiteConfig
+Controller:
+  extensions:
+    - MyControllerExtension
+Member:
+  extensions:
+    - PrintCalc\MemberExtension
+DataObject:
+  extensions:
+    - PrintCalc\PublicExtension
+

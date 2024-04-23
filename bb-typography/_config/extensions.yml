@@ -1,0 +1,21 @@
+---
+Name: bbTypographExtensions
+After:
+  - 'framework/*'
+  - 'cms/*'
+---
+#BB\TypographAdmin:
+#  extensions:
+#    - SubsiteMenuExtension
+BB\Finishing:
+  extensions:
+    ['TranslatableDataObject']
+BB\PaperType:
+  extensions:
+    ['TranslatableDataObject']
+BB\PaperFormat:
+  extensions:
+    ['TranslatableDataObject']
+BB\Chromaticity:
+  extensions:
+    ['TranslatableDataObject']

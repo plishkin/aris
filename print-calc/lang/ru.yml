@@ -1,0 +1,337 @@
+ru:
+  PC\CoverType:
+    PLURALNAME: 'Обложки'
+    SINGULARNAME: 'Обложка'
+    db_Name: "Название"
+    db_IsColor: "В цвете"
+    db_IsSingleSide: "Односторонний"
+    has_many_CalculationRequests: "Запросы на калькуляцию"
+    many_many_BindingTypes: "Типы переплетов"
+  PC\PrintQuality:
+    PLURALNAME: 'Исполнения'
+    SINGULARNAME: 'Исполнение'
+    db_Name: "Название"
+    has_many_Machines: "Оборудование"
+    has_many_CalculationRequests: "Запросы на калькуляцию"
+  PC\BindingType:
+    PLURALNAME: 'Типы переплетов'
+    SINGULARNAME: 'Тип переплетов'
+    db_Name: "Название"
+    has_many_Bindings: "Переплеты"
+    has_many_CoverDecorationTypes: "CoverDecorationTypes"
+    many_many_BookFormats: "BookFormats"
+    many_many_CoverTypes: "Обложки"
+  PC\Machine:
+    PLURALNAME: 'Обрудование'
+    SINGULARNAME: 'Обрудование'
+    db_Name: "Название"
+    db_MaxX: "MaxX"
+    db_MaxY: "MaxY"
+    db_PrintSheetsPerA1Sheet: "PrintSheetsPerA1Sheet"
+    db_MachineFittingSeconds: "MachineFittingSeconds"
+    db_MachineFittingSheets: "MachineFittingSheets"
+    db_FormFittingSeconds: "FormFittingSeconds"
+    db_FormFittingSheets: "FormFittingSheets"
+    db_FittingFormCost: "FittingFormCost"
+    db_PrintCost: "Цена печати"
+    db_HourRate: "HourRate"
+    db_IsSingleSide: "Односторонняя"
+    db_IsColor: "В цвете"
+    db_IsCostByClick: "IsCostByClick"
+    has_many_MachineHourRates: "MachineHourRates"
+    has_many_Jobs: "Работы"
+    has_one_PrintQuality: "Исполнение"
+    has_one_MachineType: "Тип оборудования"
+    has_one_Variable: "Переменная"
+    many_many_PaperWeights: "Плотности бумаги"
+    many_many_Flows: "Процессы"
+    many_many_extraFields_Flows: "Процессы"
+    many_many_extraFields_PaperWeights: "Плотности бумаги"
+  PC\MachineType:
+    PLURALNAME: 'Типы оборудования'
+    SINGULARNAME: 'Тип оборудования'
+    db_Name: "Название"
+    db_IsPrintMachine: "Печатная машина"
+    db_IsOffsetMachine: "Офсетная машина"
+    has_many_Machines: "Оборудование"
+  PC\Variable:
+    PLURALNAME: 'Переменные'
+    SINGULARNAME: 'Переменная'
+    db_Name: "Название"
+    db_Expression: "Выражение"
+    has_many_Machines: "Оборудование"
+  PC\PaperWeight:
+    PLURALNAME: 'Плотности бумаги'
+    SINGULARNAME: 'Плотность бумаги'
+    db_Name: "Название"
+    db_Weight: "Weight"
+    has_many_PaperStockSheets: "Типы бумаги"
+    many_many_Machines: "Оборудование"
+  PC\Flow:
+    PLURALNAME: 'Процессы'
+    SINGULARNAME: 'Процесс'
+    db_Name: "Название"
+    has_many_BindingOptions: "Варианты переплетов"
+    has_many_CoverDecorations: "CoverDecorations"
+    many_many_Machines: "Оборудование"
+  PC\PaperStockSheet:
+    PLURALNAME: 'Складской лист бумаги'
+    SINGULARNAME: 'Складские листы бумаги'
+    db_Name: "Название"
+    db_Height: "Высота"
+    db_Cost: "Cost"
+    db_SizeX: "SizeX"
+    db_SizeY: "SizeY"
+    db_IsSingleSide: "Односторонний"
+    db_IsColor: "В цвете"
+    db_IsCover: "IsCover"
+    db_A1SheetsPerItem: "A1SheetsPerItem"
+    db_ColorProfile: "ColorProfile"
+    db_IsVisible: "Показывать"
+    db_SortOrder: "Порядок сортировки"
+    has_one_PaperWeight: "Плотность бумаги"
+  PC\Binding:
+    PLURALNAME: 'Переплеты'
+    SINGULARNAME: 'Переплет'
+    db_Name: "Название"
+    db_PagesMin: "PagesMin"
+    db_PagesMax: "PagesMax"
+    db_HeightMin: "HeightMin"
+    db_HeightMax: "HeightMax"
+    db_Weight: "Weight"
+    db_IsVisible: "Показывать"
+    db_SortOrder: "Порядок сортировки"
+    has_many_BindingOptions: "Варианты переплетов"
+    has_many_CalculationRequests: "Запросы на калькуляцию"
+    has_one_BindingType: "Тип переплетов"
+  PC\BindingOption:
+    PLURALNAME: 'Варианты переплетов'
+    SINGULARNAME: 'Вариант переплетов'
+    db_Name: "Название"
+    db_IsVisible: "Показывать"
+    db_SortOrder: "Порядок сортировки"
+    has_many_CalculationRequests: "Запросы на калькуляцию"
+    has_one_Binding: "Переплет"
+    has_one_Flow: "Процесс"
+  PC\BookColorType:
+    PLURALNAME: 'Типы цветности книг'
+    SINGULARNAME: 'Тип цветности книг'
+    db_Name: "Название"
+    db_HasColorPages: "HasColorPages"
+    db_HasBwPages: "HasBwPages"
+    has_many_CalculationRequests: "Запросы на калькуляцию"
+  PC\BookFormat:
+    PLURALNAME: 'Форматы книг'
+    SINGULARNAME: 'Формат книг'
+    db_Name: "Название"
+    db_Height: "Высота"
+    db_Width: "Ширина"
+    db_PagesPerNotebook: "PagesPerNotebook"
+    db_PagesPerA1Sheet: "PagesPerA1Sheet"
+    db_IsVisible: "Показывать"
+    db_SortOrder: "Порядок сортировки"
+    has_many_CalculationRequests: "Запросы на калькуляцию"
+    many_many_BindingTypes: "Типы переплетов"
+  PC\AdditionalService:
+    PLURALNAME: 'Дополнительные услуги'
+    SINGULARNAME: 'Дополнительная услуга'
+    db_Name: "Название"
+    db_Price: "Цена"
+  PC\CoverDecorationType:
+    PLURALNAME: 'Типы отделки'
+    SINGULARNAME: 'Тип отделки'
+    db_Name: "Название"
+    db_IsVisible: "Показывать"
+    db_SortOrder: "Порядок сортировки"
+    has_many_CoverDecorations: "CoverDecorations"
+    has_one_BindingType: "Тип переплетов"
+  PC\CoverDecoration:
+    PLURALNAME: 'Отделки'
+    SINGULARNAME: 'Отделка'
+    db_Name: "Название"
+    db_IsVisible: "Показывать"
+    db_SortOrder: "Порядок сортировки"
+    has_many_CalculationRequests: "Запросы на калькуляцию"
+    has_one_CoverDecorationType: "CoverDecorationType"
+    has_one_Flow: "Процесс"
+  PC\CalculationRequest:
+    PLURALNAME: 'Запросы на калькуляцию'
+    SINGULARNAME: 'Запрос на калькуляцию'
+    db_BwPageNumber: "Количество ч/б страниц"
+    db_ColorPageNumber: "Количество цветных страниц"
+    db_BookNumber1: "Количество книг 1"
+    db_BookNumber2: "Количество книг 2"
+    db_BookNumber3: "Количество книг 3"
+    db_UserEmail: "Email пользователя"
+    db_UserName: "Имя пользователя"
+    db_CompanyName: "Название компании"
+    db_UserPhone: "Телефон пользователя"
+    db_UserComments: "Комментарии пользователя"
+    has_many_Calculations: "Калькуляции"
+    has_one_Binding: "Переплет"
+    has_one_BindingOption: "Вариант переплетов"
+    has_one_BookFormat: "Формат книги"
+    has_one_BookColorType: "Тип цветной книги"
+    has_one_CoverType: "Обложка"
+    has_one_BookPaperStockSheet: "Тип бумаги книги"
+    has_one_CoverPaperStockSheet: "Тип бумаги обложки"
+    has_one_PrintQuality: "Исполнение"
+    has_one_DeliveryType: "Тип доставки"
+    has_one_FileFormat: "Формат файла"
+    has_one_CoverDecoration: "Отделка"
+    many_many_AdditionalServices: "Дополнительные услуги"
+  PC\DeliveryType:
+    PLURALNAME: 'Доставки'
+    SINGULARNAME: 'Доставка'
+    db_Name: "Название"
+    db_Price: "Цена"
+    has_many_CalculationRequests: "Запросы на калькуляцию"
+  PC\FileFormat:
+    PLURALNAME: 'Форматы файлов'
+    SINGULARNAME: 'Формат файлов'
+    db_Name: "Название"
+    db_Price: "Цена"
+    has_many_CalculationRequests: "Запросы на калькуляцию"
+  PC\OrderDeadline:
+    PLURALNAME: 'Сроки изготовления'
+    SINGULARNAME: 'Срок изготовления'
+    db_Name: "Название"
+    db_NumberOfDays: "Количество дней"
+    db_PricePercent: "Цена в процентах"
+    has_many_Calculations: "Калькуляции"
+    has_many_MachineHourRates: "MachineHourRates"
+  PC\MachineHourRate:
+    PLURALNAME: 'Почасовая скорости машины'
+    SINGULARNAME: 'Почасовая скорость машины'
+    db_HourRate: "Часовая скорость"
+    has_one_Machine: "Оборудование"
+    has_one_OrderDeadline: "OrderDeadline"
+  PC\User:
+    PLURALNAME: 'Пользователь'
+    SINGULARNAME: 'Пользователи'
+    db_Name: "Название"
+    db_Email: "Email"
+    db_Password: "Пароль"
+    has_many_ClientOrders: "Заказы клиента"
+  PC\ClientOrder:
+    PLURALNAME: 'Заказы клиента'
+    SINGULARNAME: 'Заказ клиента'
+    db_BookNumber: "BookNumber"
+    db_IsOffset: "Офсет"
+    has_one_User: "Пользователь"
+    has_one_Calculation: "Калькуляция"
+    has_one_OrderStatus: "Статус заказа"
+  PC\OrderStatus:
+    PLURALNAME: 'Статусы заказа'
+    SINGULARNAME: 'Статус заказа'
+    db_Name: "Название"
+    has_many_ClientOrders: "Заказы клиента"
+  PC\Job:
+    PLURALNAME: 'Работы'
+    SINGULARNAME: 'Работа'
+    has_one_Order: "Order"
+    has_one_Machine: "Оборудование"
+    has_one_JobStatus: "JobStatus"
+    has_one_JobPriority: "JobPriority"
+  PC\Order:
+    PLURALNAME: 'Заказы'
+    SINGULARNAME: 'Заказ'
+    has_many_Jobs: "Работы"
+  PC\JobStatus:
+    PLURALNAME: 'Статус работ'
+    SINGULARNAME: 'Статусы работ'
+    db_Name: "Название"
+    db_IsFinal: "IsFinal"
+    has_many_Jobs: "Работы"
+  PC\JobPriority:
+    PLURALNAME: 'Приоритеты работы'
+    SINGULARNAME: 'Приоритет работы'
+    db_Name: "Название"
+    db_Priority: "Приоритет"
+    has_many_Jobs: "Работы"
+  PC\Currency:
+    PLURALNAME: 'Валюты'
+    SINGULARNAME: 'Валюта'
+    db_Name: "Название"
+    has_many_CurrencyRates: "Курсы валют"
+  PC\CurrencyRate:
+    PLURALNAME: 'Курсы валют'
+    SINGULARNAME: 'Курс валют'
+    db_Rate: "Курс"
+    db_RateDate: "Дата курса"
+    has_one_Currency: "Валюта"
+PC\Calculation:
+    PLURALNAME: 'Калькуляции'
+    SINGULARNAME: 'Калькуляция'
+    db_Price0: "Цена0"
+    db_Details0: "Детали 0"
+    db_Price1: "Цена1"
+    db_Details1: "Детали 1"
+    db_Price2: "Цена2"
+    db_Details2: "Детали 2"
+    db_Price3: "Цена3"
+    db_Details3: "Детали 3"
+    db_Offsetprice1: "Цена офсета 1"
+    db_Offsetdetails1: "Детали офсета 1"
+    db_Offsetprice2: "Цена офсета 2"
+    db_Offsetdetails2: "Детали офсета 2"
+    db_Offsetprice3: "Цена офсета 3"
+    db_Offsetdetails3: "Детали офсета 3"
+    has_many_ClientOrders: "Заказы клиента"
+    has_one_CalculationRequest: "Запрос на калькуляцию"
+    has_one_OrderDeadline: "Срок изготовления"
+    PriceTrace1: "Общее кол-во страниц: "
+    PriceTrace2: "Справочник -> Кол-во страниц выбранного формата на листе A1 (с двух сторон): "
+    PriceTrace3: "Толщина корешка : "
+    PriceTrace4: "Толщина корешка c учетом сгибов : "
+    PriceTrace5: "Выбор печатной машины:"
+    PriceTrace6: 'Цветная книга ? :'
+    PriceTrace7: "Машина-> "
+    PriceTrace8: "Количество уникальных форм на тираж: "
+    PriceTrace9: "Количество кликов на тираж: "
+    PriceTrace10: "Общая цена на машину : "
+    PriceTrace11: "Цена выбранной машины - "
+    PriceTrace12: "ОБЛОЖКА"
+    PriceTrace13: "Полная ширина обложки : "
+    PriceTrace14: "Полная высота обложки : "
+    PriceTrace15: "Кол-во сторон у обложки :"
+    PriceTrace16: "Выбор машины для обложки : "
+    PriceTrace17: "Машина-> "
+    PriceTrace18: "Кол-во обложек за один клик машины : "
+    PriceTrace19: "Machine is skipped."
+    PriceTrace20: "Кол-во кликов на обложки : "
+    PriceTrace21: "Общая стоимость печати обложки :"
+    PriceTrace22: "Цена выбранной машины - "
+    PriceTrace23: "Дополнительные операции"
+    PriceTrace24: "Процесс для вариантов переплетов:"
+    PriceTrace25: 'Общая стоимость процесса : '
+    PriceTrace26: "Процесс для отделки:"
+    PriceTrace27: 'Общая стоимость процесса : '
+    PriceTrace28: "Дополнительные услуги"
+    PriceTrace29: "Стоимость дополнительных услуг: "
+    PriceTrace30: "Доставка"
+    PriceTrace31: 'Стоимость доставки :'
+    PriceTrace32: "Что-то неверно, не могу выбрать машину!"
+    PriceTrace33: "Выбранная машина ->"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

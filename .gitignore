@@ -1,0 +1,17 @@
+assets/*
+tools/phing-metadata
+silverstripe-cache
+.buildpath
+.project
+.settings
+.idea
+.DS_Store
+.env
+vendor/
+/*/
+!/mysite/
+!/*.*/
+!/bb-machines
+!/bb-typography
+!/print-calc
+!/.env.sample

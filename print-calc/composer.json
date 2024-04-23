@@ -1,0 +1,12 @@
+{
+  "name": "bb/print-calc",
+  "description": "BB print calculator Print Estimator silverstripe module",
+  "type": "silverstripe-module",
+  "require": {
+    "php": ">=5.3.3"
+  },
+  "config": {
+    "process-timeout": 600
+  },
+  "minimum-stability": "dev"
+}

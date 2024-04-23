@@ -1,0 +1,21 @@
+{
+	"name": "plishkin/aris",
+	"description": "B2B machines Print Estimator",
+	"require": {
+		"php": ">=7.1",
+		"silverstripe/cms": "3.6.1",
+		"silverstripe/framework": "3.6.1",
+		"silverstripe/reports": "3.6.1",
+		"silverstripe/siteconfig": "3.6.1",
+		"silverstripe/translatable": "2.2",
+		"bummzack/translatable-dataobject": "^2.0@dev"
+	},
+	"require-dev": {
+		"phpunit/PHPUnit": "~3.7@stable",
+		"phpmd/phpmd" : "@stable"
+	},
+	"config": {
+		"process-timeout": 600
+	},
+	"minimum-stability": "dev"
+}
