@@ -1,11 +1,3 @@
-assets/*
-tools/phing-metadata
-silverstripe-cache
-.buildpath
-.project
-.settings
-.idea
-.DS_Store
 .env
 vendor/
 /*/
@@ -15,3 +7,4 @@ vendor/
 !/bb-typography
 !/print-calc
 !/.env.sample
+!/docker

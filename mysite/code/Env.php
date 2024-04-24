@@ -6,7 +6,7 @@ class Env
 	private static $env = [];
 	public static function load()
 	{
-		$lines = file(BASE_PATH . '/.env', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+		$lines = file(__DIR__ . '/../../.env', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 
 		foreach ($lines as $line) {
 
@@ -23,6 +23,9 @@ class Env
 				putenv(sprintf('%s=%s', $name, $value));
 				$_ENV[$name] = $value;
 				$_SERVER[$name] = $value;
+			}
+			if (strpos($name, 'SS_') === 0 && !defined($name)) {
+				define($name, $value);
 			}
 		}
 	}

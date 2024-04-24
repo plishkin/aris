@@ -3,7 +3,10 @@
 global $project;
 $project = 'mysite';
 
+require_once(__DIR__ . '/code/Env.php');
 Env::load();
+
+//require_once(__DIR__ . '/../framework/conf/ConfigureFromEnv.php');
 
 global $databaseConfig;
 $databaseConfig = array(
@@ -14,9 +17,6 @@ $databaseConfig = array(
 	'database' => $_ENV['SS_DATABASE_NAME'],
 	'port' => $_ENV['SS_DATABASE_PORT'],
 );
-
-Config::inst()->update('Director', 'environment_type', "dev");// live dev
-
 
 ini_set('display_errors',1);
 ini_set('html_errors','On');

@@ -1,0 +1,61 @@
+services:
+  nginx:
+    image: "aris-nginx"
+    container_name: "${COMPOSE_PROJECT_NAME}-nginx"
+    build:
+      context: .
+      dockerfile: docker/dockerfiles/nginx.Dockerfile
+    ports:
+      - "${APP_PORT}:80"
+    volumes:
+      - .:/var/www
+    networks:
+      - common
+    restart: unless-stopped
+    depends_on:
+      - fpm
+  fpm:
+    image: "aris-fpm"
+    container_name: "${COMPOSE_PROJECT_NAME}-fpm"
+    build:
+      context: .
+      dockerfile: docker/dockerfiles/php.Dockerfile
+      args:
+        - INSTALL_XDEBUG=${INSTALL_XDEBUG}
+    extra_hosts:
+      - 'host.docker.internal:host-gateway'
+    volumes:
+      - .:/var/www
+    ports:
+      - "9000"
+    networks:
+      - common
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+  db:
+    image: "aris-db"
+    container_name: "${COMPOSE_PROJECT_NAME}-db"
+    build:
+      context: .
+      dockerfile: docker/dockerfiles/db.Dockerfile
+    ports:
+      - "${FORWARD_DB_PORT}:${SS_DATABASE_PORT}"
+    environment:
+      MYSQL_ROOT_PASSWORD: "${SS_DATABASE_PASSWORD}"
+      MYSQL_ROOT_HOST: "%"
+      MYSQL_DATABASE: "${SS_DATABASE_NAME}"
+      MYSQL_USER: "${SS_DATABASE_USERNAME}"
+      MYSQL_PASSWORD: "${SS_DATABASE_PASSWORD}"
+      MYSQL_ALLOW_EMPTY_PASSWORD: 1
+    volumes:
+      - ./storage/data/db:/home
+    restart: unless-stopped
+    healthcheck:
+      test: "exit 0"
+    networks:
+      - common
+networks:
+  common:
+    driver: bridge

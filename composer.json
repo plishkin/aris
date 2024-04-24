@@ -8,14 +8,18 @@
 		"silverstripe/reports": "3.6.1",
 		"silverstripe/siteconfig": "3.6.1",
 		"silverstripe/translatable": "2.2",
-		"bummzack/translatable-dataobject": "^2.0@dev"
+		"bummzack/translatable-dataobject": "^2.0@dev",
+		"plishkin/aris-theme": "^1.0"
 	},
 	"require-dev": {
-		"phpunit/PHPUnit": "~3.7@stable",
+		"phpunit/phpunit": "~3.7@stable",
 		"phpmd/phpmd" : "@stable"
 	},
 	"config": {
-		"process-timeout": 600
+		"process-timeout": 600,
+		"allow-plugins": {
+			"composer/installers": true
+		}
 	},
 	"minimum-stability": "dev"
 }
