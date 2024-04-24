@@ -16,4 +16,10 @@ class MemberExtension extends \DataExtension
 		return $member->FirstName.($member->Surname?' ':'').$member->Surname;
 	}
 
+	public function requireDefaultRecords()
+	{
+		parent::requireDefaultRecords();
+		\Security::setDefaultAdmin($_ENV['SS_DEFAULT_ADMIN_USERNAME'], $_ENV['SS_DEFAULT_ADMIN_PASSWORD']);
+	}
+
 }
