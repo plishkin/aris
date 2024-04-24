@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 docker compose stop
+docker compose down
 
 sudo rm -rf silverstripe-cache
 sudo rm -rf assets

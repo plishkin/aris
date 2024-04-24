@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "34db449b88fde4260f8367d151d53b1b",
+    "content-hash": "3e5c32bcb30aadd62df85f594e213104",
     "packages": [
         {
             "name": "bummzack/translatable-dataobject",
@@ -215,6 +215,12 @@
                 "url": "https://github.com/plishkin/aris-theme.git",
                 "reference": "8089064138576b1f3cb1a1fad973821693909e38"
             },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/plishkin/aris-theme/zipball/8089064138576b1f3cb1a1fad973821693909e38",
+                "reference": "8089064138576b1f3cb1a1fad973821693909e38",
+                "shasum": ""
+            },
             "require": {
                 "composer/installers": "*",
                 "silverstripe/framework": ">=3.5"
@@ -223,6 +229,7 @@
             "extra": {
                 "installer-name": "aris"
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -237,6 +244,10 @@
                 "silverstripe",
                 "theme"
             ],
+            "support": {
+                "issues": "https://github.com/plishkin/aris-theme/issues",
+                "source": "https://github.com/plishkin/aris-theme/tree/1.0"
+            },
             "time": "2024-04-23T14:41:36+00:00"
         },
         {
@@ -515,6 +526,107 @@
                 "source": "https://github.com/silverstripe/silverstripe-translatable/tree/2"
             },
             "time": "2016-05-19T00:03:06+00:00"
+        },
+        {
+            "name": "symbiote/silverstripe-gridfieldextensions",
+            "version": "1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symbiote/silverstripe-gridfieldextensions.git",
+                "reference": "f80fc03bbb58be6c93ba5d439528956b2400ddaa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symbiote/silverstripe-gridfieldextensions/zipball/f80fc03bbb58be6c93ba5d439528956b2400ddaa",
+                "reference": "f80fc03bbb58be6c93ba5d439528956b2400ddaa",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "~3.1"
+            },
+            "replace": {
+                "ajshort/silverstripe-gridfieldextensions": "self.version"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "gridfieldextensions",
+                "branch-alias": {
+                    "dev-master": "1.4.x-dev"
+                },
+                "screenshots": [
+                    "docs/en/_images/editable-rows.png",
+                    "docs/en/_images/add-existing-search.png"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Marcus Nyeholt",
+                    "email": "marcus@silverstripe.com.au"
+                },
+                {
+                    "name": "Andrew Short",
+                    "email": "andrewjshort@gmail.com"
+                }
+            ],
+            "description": "A collection of useful grid field components",
+            "homepage": "http://github.com/silverstripe-australia/silverstripe-gridfieldextensions",
+            "keywords": [
+                "gridfield",
+                "silverstripe"
+            ],
+            "support": {
+                "issues": "http://github.com/silverstripe-australia/silverstripe-gridfieldextensions/issues",
+                "source": "https://github.com/symbiote/silverstripe-gridfieldextensions/tree/1.4"
+            },
+            "time": "2017-08-24T06:31:10+00:00"
+        },
+        {
+            "name": "undefinedoffset/sortablegridfield",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/UndefinedOffset/SortableGridField.git",
+                "reference": "3d47b2b8b56e5f81e98d317720602a41761a82ce"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/UndefinedOffset/SortableGridField/zipball/3d47b2b8b56e5f81e98d317720602a41761a82ce",
+                "reference": "3d47b2b8b56e5f81e98d317720602a41761a82ce",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "*",
+                "silverstripe/framework": ">=3.0.1 <4.0.0"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "sortablegridfield"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ed Chipman",
+                    "homepage": "http://www.edchipman.ca",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Adds drag and drop functionality to SilverStripe 3.0's GridField",
+            "keywords": [
+                "gridfield",
+                "silverstripe"
+            ],
+            "support": {
+                "issues": "https://github.com/undefinedoffset/SortableGridField/issues",
+                "source": "https://github.com/UndefinedOffset/SortableGridField/tree/1.0.3"
+            },
+            "time": "2018-09-25T12:45:32+00:00"
         }
     ],
     "packages-dev": [

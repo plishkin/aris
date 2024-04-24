@@ -310,7 +310,7 @@ class PrintCalcPage_Controller extends Page_Controller {
         $pr = new \PC\ProductRequest();
         $form->saveInto($pr);
         if (Member::currentUserID()) $pr->MemberID = Member::currentUserID();
-        $pr->IP = $_SERVER['REMOTE_ADDR'];
+        $pr->IP = $_SERVER['HTTP_X_REAL_IP'];
         try {
             $pr->write();
             $pr->Price = $pr->caclulatePrice();

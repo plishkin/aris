@@ -10,6 +10,7 @@ class ProductAdmin extends \ModelAdmin  {
     private static $managed_models = array(
         'PC\Product',
         'PC\ProductRequest',
+        'PC\ProductRequestConfig',
     );
 
     private static $url_segment = 'pc-product';

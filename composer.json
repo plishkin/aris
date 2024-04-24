@@ -9,6 +9,8 @@
 		"silverstripe/siteconfig": "3.6.1",
 		"silverstripe/translatable": "2.2",
 		"bummzack/translatable-dataobject": "^2.0@dev",
+		"symbiote/silverstripe-gridfieldextensions": "1.5",
+		"undefinedoffset/sortablegridfield": "1.0.3",
 		"plishkin/aris-theme": "^1.0"
 	},
 	"require-dev": {
