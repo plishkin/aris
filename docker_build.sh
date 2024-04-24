@@ -20,6 +20,7 @@ docker compose build
 docker compose up -d db
 docker compose up -d fpm
 docker compose exec fpm composer install --optimize-autoloader
+docker compose exec db bash mysql_last.sh
 docker compose exec fpm php framework/cli-script.php /dev/build flush=1
 
 docker compose up -d #--remove-orphans
