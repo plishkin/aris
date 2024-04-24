@@ -19,7 +19,11 @@ class MemberExtension extends \DataExtension
 	public function requireDefaultRecords()
 	{
 		parent::requireDefaultRecords();
-		\Security::setDefaultAdmin($_ENV['SS_DEFAULT_ADMIN_USERNAME'], $_ENV['SS_DEFAULT_ADMIN_PASSWORD']);
+		$admin = \Security::findAnAdministrator();
+		if (!$admin->Password) {
+			$admin->Password = $_ENV['SS_DEFAULT_ADMIN_PASSWORD'];
+			$admin->write();
+		}
 	}
 
 }
